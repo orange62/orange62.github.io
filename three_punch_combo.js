@@ -26,5 +26,5 @@
         }
         
         // 绑定多种事件以确保兼容性
-        $('#start').on('click touchstart', handleStartCount);
-        $('#stop').on('click touchstart', handleStopClick);
+        $('#start').bind('click touchstart', handleStartCount);
+        $('#stop').bind('click touchstart', handleStopClick);
