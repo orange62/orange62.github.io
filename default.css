@@ -43,6 +43,22 @@ body {
     vertical-align: middle;
     font-family: "微软雅黑";
     cursor: pointer;
+    /* 移动端优化 */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* 确保按钮有足够的触摸区域 */
+    min-height: 44px;
+    padding: 10px;
+    border: none;
+    background: #007AFF;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
 }
 
 #stop {
@@ -52,6 +68,22 @@ body {
     vertical-align: middle;
     font-family: 微软雅黑;
     cursor: pointer;
+    /* 移动端优化 */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* 确保按钮有足够的触摸区域 */
+    min-height: 44px;
+    padding: 10px;
+    border: none;
+    background: #FF3B30;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
 }
 
 #cfg {

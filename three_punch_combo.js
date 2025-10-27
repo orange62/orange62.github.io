@@ -1,5 +1,8 @@
         $i = 0;
-        $('#start').click(function(){
+        
+        function handleStartCount(e) {
+            e.preventDefault();
+            e.stopPropagation();
             $i++;
             if($i >=6 ){
                 $('#start').hide();
@@ -11,10 +14,17 @@
                 // 显示最终结果
                 $('#what').html('别选了，随便吃点吧！');
             }
-        })
-        $('#stop').click(function(){
+        }
+        
+        function handleStopClick(e) {
+            e.preventDefault();
+            e.stopPropagation();
             alert('这么作？今天别吃了！')
             $(this).hide();
             $('#start').show();
             $i = 0; // 重置计数器
-        })
+        }
+        
+        // 绑定多种事件以确保兼容性
+        $('#start').on('click touchstart', handleStartCount);
+        $('#stop').on('click touchstart', handleStopClick);
