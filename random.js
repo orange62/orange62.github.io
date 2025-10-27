@@ -4,6 +4,11 @@
         timer;
 
     $("#start").click(function () {
+        // 检查是否已经达到最大点击次数
+        if ($(this).is(':hidden')) {
+            return;
+        }
+
         var list = $("#list").val().replace(/ +/g, " ").replace(/^ | $/g, "").split(" ");
         if (!run) {
             heading.html(heading.html().replace("吃这个！", "吃什么？"));
